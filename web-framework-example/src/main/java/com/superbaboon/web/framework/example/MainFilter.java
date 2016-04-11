@@ -23,12 +23,10 @@ public class MainFilter extends AbstractWebApiFilter {
     // api name --> api bean
     private Map<String, String> apiBeanNamesMap = new HashMap<String, String>();
 
-    @Override
     protected Response findMatchedResponse(HttpServletRequest httpServletRequest) {
         return DefaultResponseFactory.createResponse(httpServletRequest);
     }
 
-    @Override
     protected API findMatchedAPI(HttpServletRequest httpServletRequest) {
         String requestURI = httpServletRequest.getRequestURI();
         return doFindMatchedAPI(requestURI);
@@ -91,5 +89,4 @@ public class MainFilter extends AbstractWebApiFilter {
         /*解决启动毛刺,因为api类的作用于都是prototype,在Spring容器中都是延迟加载,所以需要进行一次预启动。*/
         applicationContext.getBeansOfType(API.class);
     }
-
 }
