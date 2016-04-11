@@ -5,3 +5,8 @@
 ![执行流程](./Http请求执行逻辑.jpg)
 
 # 使用说明
+
+* pom依赖web-framework-core
+* 编写MainFilter & web.xml配置
+* 编写API
+* (optional)增加ApiExecutePreProcessor,增加ApiExecutePostProcessor,增加Response返回类型
