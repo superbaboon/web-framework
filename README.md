@@ -9,4 +9,6 @@
 * pom依赖web-framework-core
 * 编写MainFilter & web.xml配置
 * 编写API
-* (optional)增加ApiExecutePreProcessor,增加ApiExecutePostProcessor,增加Response返回类型
+* (optional)增加ApiExecutePreProcessor
+* (optional)增加ApiExecutePostProcessor
+* (optional)增加Response返回类型
